@@ -15,9 +15,10 @@ public class ExempleDUtilisation {
         Font font = monBandeau.getFont();
         Color back = monBandeau.getBackground();
         Color fore = monBandeau.getForeground();
-
+        
         monBandeau.setMessage("Hello");
 	monBandeau.sleep(1000);
+        //Effet changement de police
 	monBandeau.setMessage("On va changer de police");
 	monBandeau.sleep(1000);
 	monBandeau.setMessage("Monospaced 15 Bold");
@@ -26,9 +27,11 @@ public class ExempleDUtilisation {
 	monBandeau.setMessage("SansSerif 15");
 	monBandeau.setFont(new Font("SansSerif", Font.PLAIN, 15));
 	monBandeau.sleep(1000);
+        //Effet ZOOM
 	monBandeau.setMessage("On va zoomer");
 	monBandeau.sleep(1000);
 	monBandeau.setMessage("Zoom........");
+
 	for (int i = 5; i < 60 ; i+=5) {
 		monBandeau.setFont(new Font("Dialog", Font.BOLD, 5+i));
 		monBandeau.sleep(100);
@@ -36,21 +39,24 @@ public class ExempleDUtilisation {
 	monBandeau.sleep(1000);
 
 	monBandeau.setFont(new Font("Courier new", Font.PLAIN, 15));
+        //Effet Rotation
 	monBandeau.setMessage("On va tourner");
 	monBandeau.sleep(1000);
 	monBandeau.setMessage("On tourne...");
 	for (int i = 0; i <= 100; i++) {
 		monBandeau.setRotation(2*Math.PI*i / 100);
-		monBandeau.sleep(100);
+		monBandeau.sleep(50);
 	}
-
+        //Effet changement de couleur de fond
 	monBandeau.setMessage("On va changer de couleur de fond");
 	monBandeau.sleep(1000);
 	monBandeau.setBackground(Color.DARK_GRAY);
+        //Effet changement de la police d'écriture
 	monBandeau.setMessage("On va changer de couleur");
 	monBandeau.sleep(1000);
-	monBandeau.setForeground(Color.YELLOW);
+	monBandeau.setForeground(Color.PINK);
 	monBandeau.sleep(1000);
+        //On remet tout à la normal
 	monBandeau.setFont(font);
 	monBandeau.setForeground(fore);
 	monBandeau.setBackground(back);
